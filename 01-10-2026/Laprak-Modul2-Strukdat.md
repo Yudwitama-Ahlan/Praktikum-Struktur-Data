@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 2 - Codeblocks IDE & Pengenalan Bahas C++ (Bagian Kedua)</h1>
+# <h1 align="center">Laporan Praktikum Modul 2 - Codeblocks IDE & Pengenalan Bahasa C++ (Bagian Kedua)</h1>
 
 <p align="center">Yudwitama Ahlan Putra Hayuning Bawana - 109082530016</p>
 
