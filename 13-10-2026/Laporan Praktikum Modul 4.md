@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 4 - Singly Linked List (Bagian Pertama)</h1>
+# <h1 align="center">Laporan Praktikum Modul 4 - Singly Linked List</h1>
 
 <p align="center">Yudwitama Ahlan Putra Hayuning Bawana - 109082530016</p>
 
