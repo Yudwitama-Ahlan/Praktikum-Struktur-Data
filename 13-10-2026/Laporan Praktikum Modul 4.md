@@ -414,7 +414,7 @@ int main() {
 
 ### Output Unguided 1 :
 
-![Screenshot Output Unguided 1_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/13-10-2026/Output/Output-Unguided1-1.png)
+![Screenshot Output Unguided 1_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/13-10-2026/Output/Unguided-One.png?raw=true)
 
 Header memuat tipe `infotype` (int), `address` sebagai pointer ke `ElmList`, struct `ElmList` yang berisi `info` dan `next`, struct `List` yang menyimpan `First`, dan lima prosedur yang diminta soal. Di `Singlylist.cpp`, `createList` mengisi `First` dengan `Nil`, `alokasi` membuat simpul baru berisi nilai `x` dengan `next` bernilai `Nil`, `dealokasi` membebaskan memorinya, `printInfo` menelusuri list dan mencetak `info` tiap simpul, dan `insertFirst` memasang simpul baru di depan list. Pada `main`, nilai 2, 0, 8, 12, 9 dimasukkan berurutan memakai `insertFirst`. Karena setiap simpul baru selalu ditaruh paling depan, urutan di dalam list jadi kebalik dari urutan insert, yaitu 9 12 8 0 2, sama dengan gambar linked list di soal. Pada soal, baris `printInfo(L)` tidak diberi titik koma, jadi di kode ini titik komanya ditambahkan supaya bisa di-compile.
 
@@ -602,7 +602,7 @@ int main() {
 
 ### Output Unguided 2 :
 
-![Screenshot Output Unguided 2_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/13-10-2026/Output/Output-Unguided2-1.png)
+![Screenshot Output Unguided 2_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/13-10-2026/Output/Unnguided-Two.png?raw=true)
 
 Soal kedua memakai list yang sama dengan soal pertama (9 12 8 0 2), jadi header dan source ditambah lima prosedur baru: `deleteFirst`, `deleteLast`, `deleteAfter`, `nbList`, dan `deleteList`. `deleteFirst` membuang node 9 dengan cara menggeser `First` ke node 12. `deleteLast` berjalan memakai `Q` sampai `Q->next->next` bernilai `Nil`, artinya `Q` berhenti tepat sebelum simpul terakhir, lalu node 2 dilepas. Node 8 berada tepat setelah node 12, jadi `deleteAfter` dipanggil dengan `P4` (node 12) sebagai `Prec`, dan `Prec->next` dilompatkan ke node 0. Sisa list adalah 12 0 dan `nbList` menghitung 2 node. Terakhir, `deleteList` membuang semua simpul satu per satu, menyimpan alamat simpul berikutnya sebelum simpul sekarang didealokasi, lalu mencetak "- List Berhasil Terhapus -". `nbList` setelah itu bernilai 0, sesuai output yang diminta soal.
 
