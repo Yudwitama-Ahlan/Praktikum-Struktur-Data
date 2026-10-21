@@ -624,9 +624,7 @@ int main() {
 
 ### Output Unguided 1 :
 
-##### Output 1
-
-![Screenshot Output Unguided 1_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/20-10-2026/Output/Output-Unguided1-1.png)
+![Screenshot Output Unguided 1_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/20-10-2026/Output/Unguided-One.png?raw=true)
 
 Header memuat `infotype` (int), `address` sebagai pointer ke `ElmList`, struct `ElmList` yang berisi `info` dan `next`, struct `List` yang menyimpan `First`, serta prototype prosedur dan fungsi untuk ketiga soal. Di `Singlylist.cpp`, `createList` mengisi `First` dengan `Nil`, `alokasi` membuat simpul berisi nilai `x`, `dealokasi` membebaskan memorinya, `printInfo` menelusuri list sambil mencetak `info` tiap simpul, dan `insertFirst` memasang simpul baru di depan list. Nilai 2, 0, 8, 12, 9 dimasukkan berurutan dengan `insertFirst`. Karena tiap simpul baru selalu ditaruh paling depan, urutan di dalam list jadi kebalik dari urutan insert, yaitu 9 12 8 0 2, sama dengan ilustrasi di soal. Pada soal, prosedur ditulis `CreateList` sedangkan `main` memanggil `createList`, jadi di kode ini dipakai `createList` agar sesuai dengan `main`. Titik koma setelah `printInfo(L)` juga ditambahkan supaya program bisa di-compile.
 
@@ -636,9 +634,7 @@ Soal ini memakai file yang sama dengan Unguided 1. Bagian yang menjawabnya adala
 
 ### Output Unguided 2 :
 
-##### Output 1
-
-![Screenshot Output Unguided 2_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/20-10-2026/Output/Output-Unguided2-1.png)
+![Screenshot Output Unguided 2_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/20-10-2026/Output/Unguided-Two.png?raw=true)
 
 `findElm` memulai penelusuran dari `First`, membandingkan `info` setiap simpul dengan `x`, dan langsung mengembalikan alamat simpul begitu nilainya cocok. Kalau penelusuran sampai `Nil` tanpa kecocokan, fungsi mengembalikan `Nil`. Pada list 9 12 8 0 2, angka 8 ada di simpul ketiga, jadi `findElm` mengembalikan alamat simpul itu, dan `main` mencetak "8 ditemukan dalam list" karena hasilnya tidak sama dengan `Nil`. Fungsi mengembalikan alamat, bukan sekadar true atau false, supaya hasil pencarian bisa dipakai untuk operasi lanjutan seperti insert after atau update pada node tersebut.
 
@@ -648,9 +644,7 @@ Soal ini juga memakai file yang sama. Bagian yang menjawabnya adalah fungsi `tot
 
 ### Output Unguided 3 :
 
-##### Output 1
-
-![Screenshot Output Unguided 3_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/20-10-2026/Output/Output-Unguided3-1.png)
+![Screenshot Output Unguided 3_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/20-10-2026/Output/Unguided-Three.png?raw=true)
 
 `totalInfo` menelusuri list dari `First` dan menjumlahkan `info` setiap simpul ke variabel `total`. Variabel `total` mulai dari 0, lalu bertambah 9, 12, 8, 0, dan 2 berturut-turut sampai `P` bernilai `Nil`, sehingga hasil akhirnya 31. Penelusurannya sama dengan `printInfo` dan `nbList`, hanya saja yang dilakukan di setiap simpul adalah penjumlahan, bukan mencetak atau menghitung banyak simpul. Kalimat "Total info dari kelima elemen adalah" ditulis langsung di `main` agar sama dengan output yang diminta soal.
 
