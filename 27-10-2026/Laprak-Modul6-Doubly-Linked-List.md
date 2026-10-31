@@ -429,7 +429,7 @@ int main() {
 
 ### Output Unguided 1 :
 
-![Screenshot Output Unguided 1_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/30-10-2026/Output/Output-Unguided1-1.png)
+![Screenshot Output Unguided 1_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/27-10-2026/Output-Unguided/Unguided-One.png?raw=true)
 
 Di soal ini aku bikin ADT buku di Buku.h, isinya struct buku (kodeBuku, judul, thnTerbit) yang dipakai sebagai infotype, lalu ElmList dengan next dan prev, dan List dengan First dan Last. Buku.h aku tulis lengkap sekalian dengan prototype findElm dan tiga prosedur delete untuk soal 2 dan 3, jadi nanti tidak perlu diubah lagi.
 
@@ -469,7 +469,7 @@ address findElm(List L, infotype x) {
 
 ### Output Unguided 2 :
 
-![Screenshot Output Unguided 2_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/30-10-2026/Output/Output-Unguided2-1.png)
+![Screenshot Output Unguided 2_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/27-10-2026/Output-Unguided/Unguided-Two.png?raw=true)
 
 findElm mulai dari First lalu maju lewat next sampai ketemu kodeBuku yang sama atau sampai habis. Kalau ketemu, yang dikembalikan alamat elemennya, kalau tidak ada hasilnya Nil. Karena itu fungsi ini bisa dipakai dua kali: buat cek duplikasi di soal 1 dan buat mencari B001 di soal ini. Di main, hasilnya dicek dulu apakah Nil, kalau bukan baru datanya dicetak.
 
@@ -543,7 +543,7 @@ void deleteAfter(address Prec, address &P) {
 
 ### Output Unguided 3 :
 
-![Screenshot Output Unguided 3_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/30-10-2026/Output/Output-Unguided3-1.png)
+![Screenshot Output Unguided 3_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/27-10-2026/Output-Unguided/Unguided-Three.png?raw=true)
 
 Di main, elemen yang mau dihapus dicari dulu pakai findElm, lalu program memilih prosedur yang cocok. Kalau elemennya First, dipanggil deleteFirst. Kalau Last, dipanggil deleteLast. Selain itu berarti elemennya ada di tengah, jadi dipanggil deleteAfter dengan elemen sebelumnya (P->prev) sebagai Prec.
 
