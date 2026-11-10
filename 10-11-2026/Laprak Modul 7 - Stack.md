@@ -310,7 +310,7 @@ int main() {
 
 ### Output Unguided 1 :
 
-![Screenshot Output Unguided 1_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/10-11-2026/Output/Output-Unguided1-1.png)
+![Screenshot Output Unguided 1_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/10-11-2026/Output/Unguided-One.png?raw=true)
 
 Soal pertama meminta ADT Stack dari array yang memuat 20 integer. Di stack.h, infotype diubah menjadi int dan ukuran array info menjadi 20. Bedanya dengan Guided, pop di sini berupa fungsi yang mengembalikan nilai, sesuai ADT di soal, jadi data yang diambil langsung dikembalikan ke pemanggil. Kalau hasilnya tidak ditampung, seperti di main, nilainya dibuang begitu saja. printInfo mencetak \[TOP\] lalu isi stack dari atas ke bawah. balikStack membalik urutan isi stack memakai dua penanda, kiri di dasar dan kanan di puncak. Isi keduanya ditukar, lalu penanda bergerak ke tengah sampai bertemu. Di PDF, main memanggil Push dengan huruf P besar, sedangkan ADT-nya mendefinisikan push dengan huruf kecil. C++ membedakan huruf besar dan kecil, jadi di kode ini dipakai push. Kalau ditelusuri dari dasar ke puncak, isi stack berubah begini: push 3, 4, 8 menghasilkan 3 4 8, pop membuangnya jadi 3 4, push 2 dan 3 jadi 3 4 2 3, pop jadi 3 4 2, lalu push 9 jadi 3 4 2 9. Karena itu printInfo menampilkan 9 2 4 3, dan setelah dibalik menjadi 3 4 2 9, sama dengan Gambar 7-11 di modul.
 
@@ -434,7 +434,7 @@ int main() {
 
 ### Output Unguided 2 :
 
-![Screenshot Output Unguided 2_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/10-11-2026/Output/Output-Unguided2-1.png)
+![Screenshot Output Unguided 2_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/10-11-2026/Output/Unguided-Two.png?raw=true)
 
 Soal kedua menambah prosedur pushAscending. stack.h dan stack.cpp di atas sudah memuat semua prosedur dari soal 1, jadi yang baru hanya pushAscending. Setiap data baru dimasukkan di tempat yang pas supaya isi stack dari dasar ke puncak selalu urut naik, jadi angka terbesar ada di puncak. Caranya memakai satu stack bantu. Selama elemen paling atas stack utama lebih besar dari x, elemen itu di-pop lalu dipindah ke stack bantu. Setelah itu x di-push ke stack utama, dan semua elemen di stack bantu dikembalikan satu per satu. Contohnya saat angka 2 masuk ke stack yang isinya 3 4 8 (dasar ke puncak). Angka 8, 4, dan 3 dipindah dulu ke stack bantu, 2 di-push, lalu 3, 4, 8 dikembalikan sehingga isinya menjadi 2 3 4 8. Syarat perulangannya memakai "lebih besar" tanpa tanda sama dengan. Waktu angka 3 yang kedua masuk, 3 yang lama tidak ikut dipindah, jadi 3 yang baru duduk tepat di atasnya. Setelah enam angka masuk, printInfo menampilkan 9 8 4 3 3 2, dan setelah balikStack menjadi 2 3 3 4 8 9, sama dengan Gambar 7-13.
 
@@ -565,7 +565,7 @@ int main() {
 
 ### Output Unguided 3 :
 
-![Screenshot Output Unguided 3_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/10-11-2026/Output/Output-Unguided3-1.png)
+![Screenshot Output Unguided 3_1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/10-11-2026/Output/Unguided-Three.png?raw=true)
 
 Soal ketiga menambah getInputStream. stack.h dan stack.cpp di atas sudah memuat semua prosedur dari soal 1 dan 2, jadi yang baru hanya getInputStream. Prosedur ini yang membaca ketikan user satu karakter demi satu karakter sampai Enter ditekan. Dipakai cin.get() karena setiap dipanggil dia mengambil satu karakter, termasuk Enter yang terbaca sebagai '\\n'. Perulangan while berjalan selama karakter yang terbaca bukan '\\n'. Setiap karakter yang berupa angka diubah menjadi nilai integernya dengan c - '0', lalu di-push. Pengurangan itu perlu karena karakter '4' sebenarnya menyimpan kode ASCII 52, jadi harus dikurangi kode '0' yaitu 48 supaya hasilnya 4. Karakter selain angka dilewati. Dengan input 4729601, angka masuk dari kiri ke kanan sehingga 1 masuk paling akhir dan berada di puncak. printInfo menampilkan 1 0 6 9 2 7 4, dan setelah dibalik menjadi 4 7 2 9 6 0 1, sama dengan Gambar 7-15.
 
