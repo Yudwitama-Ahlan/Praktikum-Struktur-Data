@@ -621,22 +621,7 @@ File `main.cpp` ini ditulis mengikuti skenario pengujian pada Gambar 8-18 di mod
 
 ### Output Unguided 1 :
 
-##### Output 1
-
-```text
-Hello World
-----------------------
- H - T 	 | Queue info
-----------------------
--1 - -1	 | empty queue
-0 - 0	 | 5
-0 - 1	 | 5 2
-0 - 2	 | 5 2 7
-0 - 1	 | 2 7
-0 - 2	 | 2 7 4
-0 - 1	 | 7 4
-0 - 0	 | 4
-```
+![Screenshot Output Unguided 1](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/17-11-2026/Unguided/Output/Unguided-One.png?raw=true)
 
 Dari hasil output Unguided 1 di atas, terlihat jelas cara kerja Queue Alternatif 1. Saat antrean baru dibuat, `H - T` bernilai `-1 - -1` dengan keterangan `empty queue`. Ketika angka `5`, `2`, dan `7` dimasukkan lewat `enqueue`, indeks `H` (`head`) tetap berada di `0`, sedangkan `T` (`tail`) bergerak naik dari `0`, `1`, hingga `2`. Saat `dequeue` pertama dijalankan, angka `5` keluar dan elemen `2` serta `7` bergeser maju ke indeks `0` dan `1`, sehingga `T` mundur kembali ke `1` sementara `H` tetap diam di `0`. Hal yang sama terjadi saat angka `4` masuk (`T` naik ke `2`) lalu dilakukan `dequeue` dua kali berturut-turut hingga menyisakan angka `4` di indeks `0 - 0`.
 
@@ -778,22 +763,7 @@ File `main.cpp` menjalankan urutan operasi `enqueue` dan `dequeue` yang sama sep
 
 ### Output Unguided 2 :
 
-##### Output 1
-
-```text
-Hello World
-----------------------
- H - T 	 | Queue info
-----------------------
--1 - -1	 | empty queue
-0 - 0	 | 5
-0 - 1	 | 5 2
-0 - 2	 | 5 2 7
-1 - 2	 | 2 7
-1 - 3	 | 2 7 4
-2 - 3	 | 7 4
-3 - 3	 | 4
-```
+![Screenshot Output Unguided 2](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/17-11-2026/Unguided/Output/Unguided-Two.png?raw=true)
 
 Pada output Unguided 2 ini, terlihat bahwa isi antrean yang tampil di kolom `Queue info` sama persis dengan Unguided 1, namun posisi indeks `H - T`-nya berbeda. Saat `dequeue` pertama dipanggil untuk mengeluarkan angka `5`, indeks `H` ikut bergerak maju dari `0` menjadi `1` (`1 - 2 | 2 7`) karena elemen `2` dan `7` tetap berada di indeks `1` dan `2` tanpa digeser. Ketika angka `4` dimasukkan, `T` maju ke indeks `3` (`1 - 3 | 2 7 4`), dan saat `dequeue` dipanggil dua kali lagi, indeks `H` terus maju ke `2` lalu `3` hingga menyisakan angka `4` pada posisi `3 - 3`.
 
@@ -941,22 +911,7 @@ File `main.cpp` menjalankan skenario pengujian sesuai Gambar 8-18 pada modul unt
 
 ### Output Unguided 3 :
 
-##### Output 1
-
-```text
-Hello World
-----------------------
- H - T 	 | Queue info
-----------------------
--1 - -1	 | empty queue
-0 - 0	 | 5
-0 - 1	 | 5 2
-0 - 2	 | 5 2 7
-1 - 2	 | 2 7
-1 - 3	 | 2 7 4
-2 - 3	 | 7 4
-3 - 3	 | 4
-```
+![Screenshot Output Unguided 3](https://github.com/Yudwitama-Ahlan/Praktikum-Struktur-Data/blob/main/17-11-2026/Unguided/Output/Unguided-Three.png?raw=true)
 
 Dari hasil pengujian Unguided 3 di atas, pergerakan indeks `H` dan `T` berjalan dari `-1 - -1` hingga berakhir di `3 - 3` dengan sisa elemen `4`. Keunggulan utama dari kode Alternatif 3 ini dibandingkan Alternatif 2 adalah ketika nantinya dilakukan penambahan elemen baru lagi setelah `T` mencapai indeks `4` (misalnya ditambah 두 elemen lagi), indeks `T` tidak akan tertahan oleh kondisi penuh semu, melainkan otomatis berputar kembali ke indeks `0` dan `1` selama slot di depan `head` memang sudah kosong.
 
